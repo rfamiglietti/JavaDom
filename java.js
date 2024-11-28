@@ -29,7 +29,7 @@ function verificar() {
         resultado.style.color = 'red';
     } else if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
         resultado.textContent = `O ano ${ano} é bissexto!`;
-        resultado.style.color = 'green';
+        resultado.style.color = 'blue';
     } else {
         resultado.textContent = `O ano ${ano} não é bissexto.`;
         resultado.style.color = 'red';
