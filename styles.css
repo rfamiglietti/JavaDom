@@ -1,0 +1,666 @@
+/* INDEX -------------------------------------------------------------------------------------------> */
+
+/* Reset básico */
+body, h1, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1E3A8A, #60A5FA);
+    color: #FFFFFF;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2563EB;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #1E40AF;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #EFF6FF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção do menu */
+.menu {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #2563EB;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    background-color: #1E40AF;
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid #BFDBFE;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
+/* JOGO ANO BISSEXTO -------------------------------------------------------------------------------> */
+
+/* styles.css */
+
+/* Reset básico */
+body, h1, h2, p, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1E3A8A, #60A5FA);
+    color: #FFFFFF;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2563EB;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 3px solid #1E40AF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    align-self: flex-start;
+    color: #93C5FD;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+header a:hover {
+    color: #BFDBFE;
+    text-decoration: underline;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #EFF6FF;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção principal */
+main {
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.leap-year-section p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #3B82F6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #1E40AF;
+    box-shadow: 0 0 5px #60A5FA;
+}
+
+button {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2563EB;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1E40AF;
+    transform: scale(0.95);
+}
+
+/* Resultado */
+#resultMessage {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    button, input[type="number"] {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* CALCULADORA MÉDIA ESCOLAR -----------------------------------------------------------------------> */
+
+/* Reset de margens e preenchimentos */
+body, h1, h2, p, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilização do body */
+body {
+    background-color: #e6f7ff; /* Azul claro */
+    color: #003366; /* Azul escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilização do header */
+header {
+    width: 100%;
+    background-color: #004080; /* Azul médio */
+    color: #ffffff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header button {
+    background-color: #0066cc; /* Azul vibrante */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #004080; /* Azul médio */
+}
+
+/* Estilização da seção do formulário */
+.calculator-section {
+    background-color: #ffffff; /* Branco para contraste */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.calculator-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Estilização dos inputs */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #003366; /* Azul escuro */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #0066cc; /* Azul vibrante */
+}
+
+/* Estilização do botão de calcular */
+button {
+    background-color: #004080; /* Azul médio */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0066cc; /* Azul vibrante */
+    transform: scale(1.05);
+}
+
+/* Estilização da mensagem de resultado */
+#resultMessage {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/* CALCULADORA DE GORJETA ---------------------------------------------------------------------------> */
+/* Reset de margens e preenchimentos */
+body, h1, h2, p, input, button, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilização do body */
+body {
+    background-color: #f0f8ff; /* Azul claro */
+    color: #003366; /* Azul escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilização do header */
+header {
+    width: 100%;
+    background-color: #004080; /* Azul médio */
+    color: #ffffff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header button {
+    background-color: #0066cc; /* Azul vibrante */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #004080; /* Azul médio */
+}
+
+/* Estilização da seção do formulário */
+.calculator-section {
+    background-color: #ffffff; /* Branco para contraste */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.calculator-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Estilização dos inputs e select */
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #003366; /* Azul escuro */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #0066cc; /* Azul vibrante */
+}
+
+/* Estilização do botão de calcular */
+button {
+    background-color: #004080; /* Azul médio */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0066cc; /* Azul vibrante */
+    transform: scale(1.05);
+}
+
+/* Estilização da mensagem de resultado */
+#resultMessage {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
+/* SAUDAÇÃO PELA HORA DO DIA -----------------------------------------------------------------------> */
+/* Reset de margens e preenchimentos */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilização do body */
+body {
+    background-color: #e6f7ff; /* Azul claro */
+    color: #003366; /* Azul escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilização do header */
+header {
+    width: 100%;
+    background-color: #004080; /* Azul médio */
+    color: #ffffff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header button {
+    background-color: #0066cc; /* Azul vibrante */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #004080; /* Azul médio */
+}
+
+/* Estilização da seção de saudação */
+.greeting-section {
+    background-color: #ffffff; /* Branco para contraste */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.greeting-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Estilização do botão de verificar saudação */
+button {
+    background-color: #004080; /* Azul médio */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0066cc; /* Azul vibrante */
+    transform: scale(1.05);
+}
+
+/* Estilização da mensagem de saudação */
+#greetingMessage {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/* JOGO ADIVINHAÇÃO -----------------------------------------------------------------------> */
+
+
+/* Estilo geral do corpo */
+body.adivinhacao {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1E3A8A, #60A5FA);
+    color: #FFFFFF;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Cabeçalho */
+header.adivinhacao {
+    background-color: #2563EB;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #1E40AF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #EFF6FF;
+    margin: 0 auto;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+header button {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header button:hover {
+    background-color: #1E40AF;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+header a {
+    color: #93C5FD;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+header a:hover {
+    color: #BFDBFE;
+}
+
+/* Conteúdo principal */
+main {
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+main p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+input[type="num"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #3B82F6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input[type="num"]:focus {
+    border-color: #1E40AF;
+    box-shadow: 0 0 5px #60A5FA;
+}
+
+button {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2563EB;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #1E40AF;
+    transform: scale(0.95);
+}
+
+/* Resultado */
+#resultado {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    button, input[type="num"] {
+        font-size: 0.9rem;
+    }
+}

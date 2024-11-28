@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação de Acordo com a Hora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.location.href='index.html'">VOLTAR</button>
+        <h1>Saudação de Acordo com a Hora</h1>
+    </header>
+    <main>
+        <section class="greeting-section">
+            <p>Clique no botão abaixo para obter a saudação apropriada:</p>
+            <button onclick="getGreeting()">Verificar Saudação</button>
+            <h2 id="greetingMessage" style="margin-top: 20px;"></h2>
+        </section>
+    </main>
+    
+    <script>
+        function getGreeting() {
+            const now = new Date(); // Obtém a data e hora atuais
+            const hours = now.getHours(); // Obtém somente a hora atual
+            const greetingMessage = document.getElementById('greetingMessage');
+            
+            // Define a saudação com base na hora
+            if (hours >= 6 && hours < 12) {
+                greetingMessage.textContent = "Bom dia!";
+            } else if (hours >= 12 && hours < 18) {
+                greetingMessage.textContent = "Boa tarde!";
+            } else {
+                greetingMessage.textContent = "Boa noite!";
+            }
+
+            greetingMessage.style.color = 'blue';
+        }
+    </script>
+</body>
+</html>
