@@ -7,7 +7,7 @@ body, h1, button {
 }
 
 /* Estilo geral do corpo */
-body.index {
+body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1E3A8A, #60A5FA);
     color: #FFFFFF;
@@ -20,7 +20,7 @@ body.index {
 }
 
 /* Cabeçalho */
-header.index {
+header {
     background-color: #2563EB;
     width: 100%;
     padding: 20px;
@@ -28,7 +28,7 @@ header.index {
     border-bottom: 3px solid #1E40AF;
 }
 
-header.index h1 {
+header h1 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #EFF6FF;
