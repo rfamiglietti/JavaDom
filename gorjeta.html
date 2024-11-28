@@ -14,38 +14,17 @@
     <main>
         <section class="calculator-section">
             <p>Insira o valor da conta e selecione o nível de satisfação:</p>
-            <input type="number" id="billAmount" placeholder="Valor da Conta (R$)" min="0" step="0.01">
-            <select id="satisfactionLevel">
+            <input type="number" id="valorconta" placeholder="Valor da Conta (R$)" min="0" step="0.01">
+            <select id="nivelgorjeta">
                 <option value="0.10">Bom (10%)</option>
                 <option value="0.15">Ótimo (15%)</option>
                 <option value="0.20">Excelente (20%)</option>
             </select>
-            <button onclick="calculateTip()">Calcular Gorjeta</button>
-            <h2 id="resultMessage" style="margin-top: 20px;"></h2>
+            <button onclick="calculargorjeta()">Calcular Gorjeta</button>
+            <h2 id="resultado" style="margin-top: 20px;"></h2>
         </section>
     </main>
    
-    <script>
-        function calculateTip() {
-            const billAmount = parseFloat(document.getElementById('billAmount').value);
-            const satisfactionLevel = parseFloat(document.getElementById('satisfactionLevel').value);
-            const resultMessage = document.getElementById('resultMessage');
-
-            // Verifica se o valor da conta é válido
-            if (isNaN(billAmount) || billAmount <= 0) {
-                resultMessage.textContent = 'Por favor, insira um valor válido para a conta.';
-                resultMessage.style.color = 'red';
-                return;
-            }
-
-            // Calcula a gorjeta e o valor total
-            const tip = billAmount * satisfactionLevel;
-            const total = billAmount + tip;
-
-            // Exibe os resultados
-            resultMessage.textContent = `Gorjeta: R$ ${tip.toFixed(2)} | Total a pagar: R$ ${total.toFixed(2)}`;
-            resultMessage.style.color = 'green';
-        }
-    </script>
+    <script src="java.js"></script>
 </body>
 </html>

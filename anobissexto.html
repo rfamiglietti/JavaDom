@@ -15,27 +15,11 @@
         <section class="leap-year-section">
             <p>Digite um ano para verificar se é bissexto:</p>
             <input type="number" id="yearInput" placeholder="Digite o ano" min="1">
-            <button onclick="checkLeapYear()">Verificar</button>
-            <h2 id="resultMessage" style="margin-top: 20px;"></h2>
+            <button onclick="verificar()">Verificar</button>
+            <h2 id="resultado" style="margin-top: 20px;"></h2>
         </section>
     </main>
    
-    <script>
-        function checkLeapYear() {
-            const year = parseInt(document.getElementById('yearInput').value);
-            const resultMessage = document.getElementById('resultMessage');
-
-            if (!year || year <= 0) {
-                resultMessage.textContent = 'Por favor, insira um ano válido.';
-                resultMessage.style.color = 'red';
-            } else if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-                resultMessage.textContent = `O ano ${year} é bissexto!`;
-                resultMessage.style.color = 'green';
-            } else {
-                resultMessage.textContent = `O ano ${year} não é bissexto.`;
-                resultMessage.style.color = 'blue';
-            }
-        }
-    </script>
+    <script src="java.js"></script>
 </body>
 </html>

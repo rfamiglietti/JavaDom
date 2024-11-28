@@ -14,28 +14,11 @@
     <main>
         <section class="greeting-section">
             <p>Clique no botão abaixo para obter a saudação apropriada:</p>
-            <button onclick="getGreeting()">Verificar Saudação</button>
-            <h2 id="greetingMessage" style="margin-top: 20px;"></h2>
+            <button onclick="verificarsaudacao()">Verificar Saudação</button>
+            <h2 id="resultado" style="margin-top: 20px;"></h2>
         </section>
     </main>
     
-    <script>
-        function getGreeting() {
-            const now = new Date(); // Obtém a data e hora atuais
-            const hours = now.getHours(); // Obtém somente a hora atual
-            const greetingMessage = document.getElementById('greetingMessage');
-            
-            // Define a saudação com base na hora
-            if (hours >= 6 && hours < 12) {
-                greetingMessage.textContent = "Bom dia!";
-            } else if (hours >= 12 && hours < 18) {
-                greetingMessage.textContent = "Boa tarde!";
-            } else {
-                greetingMessage.textContent = "Boa noite!";
-            }
-
-            greetingMessage.style.color = 'blue';
-        }
-    </script>
+    <script src="java.js"></script>
 </body>
 </html>

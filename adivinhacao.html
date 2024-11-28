@@ -20,23 +20,6 @@
         </section>
     </main>
 
-    <script>
-        function play() {
-            const chute = parseInt(document.getElementById('chute').value);
-            const numScreto = Math.floor(Math.random() * 10) + 1;
-            const resultado = document.getElementById('resultado');
-
-            if (!chute || chute < 1 || chute > 10) {
-                resultado.textContent = 'Por favor, digite um número válido entre 1 e 10.';
-                resultado.style.color = 'red';
-            } else if (chute === numScreto) {
-                resultado.textContent = `Parabéns, você acertou! O número era ${numScreto}.`;
-                resultado.style.color = 'green';
-            } else {
-                resultado.textContent = `Tente novamente! O número era ${numScreto}.`;
-                resultado.style.color = 'blue';
-            }
-        }
-    </script>
+    <script src="java.js"></script>
 </body>
 </html>
